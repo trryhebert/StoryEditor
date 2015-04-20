@@ -13,6 +13,19 @@ namespace StoryEditor.Controllers
 
         public ActionResult Index()
         {
+            string returnURL = "/";
+            if (Request.Params["returnurl"] != null)
+                returnURL = Request.Params["returnurl"];
+            ViewBag.ReturnURL = returnURL;
+            return View();
+        }
+        public ActionResult Save()
+        {
+            //todo: add save code here
+            return RedirectToAction("");
+        }
+        public ActionResult Return()
+        {
             return View();
         }
 

@@ -1,5 +1,12 @@
 ﻿@{
     Layout = null;
+    string returnUrl = ViewBag.ReturnURL;
+    /*
+     * todo:
+     * 1. put in model code
+     * 2. output story id
+     * 3. put in javascript to post content to the server
+     */ 
 }
 
 <!DOCTYPE html>
@@ -35,6 +42,9 @@
         #toolbar {
             margin: 10px;
         }
+        a {
+            margin: 50px 10px 10px 10px;
+        }
     </style>
 </head>
 <body>
@@ -43,12 +53,15 @@
             <div id="toolbar"></div>
         </div>
     </div>
+
+@*    <input type="hidden" id="HidStoryId" value="@Model.StoryId" />
+    *@
     <div id="wrapper">
         <div id="content-editor" class="clear">
             type here...
         </div>
     </div>
-    @Html.ActionLink("Save", "Save", null, new { @style = "margin: 50px 10px 10px 10px" })
-    @Html.ActionLink("Cancel", "Cancel", null, new { @style = "margin: 50px 10px 10px 10px" })
+    @Html.ActionLink("Save", "Save")
+    <a href="@returnUrl">Return</a>
 </body>
 </html>
