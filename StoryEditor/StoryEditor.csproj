@@ -110,6 +110,7 @@
   <ItemGroup>
     <Compile Include="Controllers\EditorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\QuillController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -127,10 +128,15 @@
     <Content Include="Content\FreshEditor\farbtastic\mask.png" />
     <Content Include="Content\FreshEditor\farbtastic\wheel.png" />
     <Content Include="Content\FreshEditor\freshereditor.css" />
+    <Content Include="Content\FreshEditor\freshereditor.js" />
     <Content Include="Content\FreshEditor\freshereditor.min.js" />
     <Content Include="Content\FreshEditor\img\glyphicons-halflings-white.png" />
     <Content Include="Content\FreshEditor\img\glyphicons-halflings.png" />
     <Content Include="Content\FreshEditor\shortcut.js" />
+    <Content Include="Content\quill\quill.js" />
+    <Content Include="Content\quill\script.js" />
+    <Content Include="Content\quill\styles.css" />
+    <Content Include="Content\quill\syntax.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -156,6 +162,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Editor\index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Quill\index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

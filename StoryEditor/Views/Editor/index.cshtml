@@ -1,23 +1,22 @@
 ﻿@{
     Layout = null;
     string returnUrl = ViewBag.ReturnURL;
-    /*
-     * todo:
-     * 1. put in model code
-     * 2. output story id
-     * 3. put in javascript to post content to the server
-     */ 
+        /*
+         * todo: put in code that makes the edit box change size with the screen.
+         * 1. put in model code
+         * 2. output story id
+         * 3. put in javascript to post content to the server
+         */ 
 }
-
 <!DOCTYPE html>
-
 <html>
 <head>
+    <title>Story</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script src="~/Content/FreshEditor/shortcut.js" type="text/javascript"></script>
     <script src="~/Content/FreshEditor/farbtastic/farbtastic.js" type="text/javascript"></script>
     <script src="~/Content/FreshEditor/bootstrap/bootstrap-dropdown.js" type="text/javascript"></script>
-    <script src="~/Content/FreshEditor/freshereditor.min.js" type="text/javascript"></script>
+    <script src="~/Content/FreshEditor/freshereditor.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             //$('#content-editor').freshereditor({ toolbar_selector: "#toolbar", excludes: ['removeFormat', 'insertheading4'] });
@@ -36,12 +35,13 @@
             width: 95%;
             min-height: 400px;
             max-height: 400px;
-            overflow:auto;
+            overflow: auto;
         }
 
         #toolbar {
             margin: 10px;
         }
+
         a {
             margin: 50px 10px 10px 10px;
         }
@@ -54,12 +54,12 @@
         </div>
     </div>
 
-@*    <input type="hidden" id="HidStoryId" value="@Model.StoryId" />
+    @*    
+    <input type="hidden" id="HidStoryId" value="@Model.StoryId" />
     *@
+
     <div id="wrapper">
-        <div id="content-editor" class="clear">
-            type here...
-        </div>
+        <div id="content-editor" class="clear"></div>
     </div>
     @Html.ActionLink("Save", "Save")
     <a href="@returnUrl">Return</a>
