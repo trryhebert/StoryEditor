@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "index";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- CDN hosted by Cachefly -->
+    <script src="~/Content/tinymce/tinymce.min.js"></script>
+    <script>
+        tinymce.init(
+            { 
+                selector: 'textarea',
+                fontsize_formats: "8pt 10pt 12pt 14pt 18pt 24pt 36pt",
+                font_formats: "Arial=arial,helvetica,sans-serif;Courier New=courier new,courier,monospace;Tahoma=tahoma,arial,helvetica,sans-serif;Times New Roman=times new roman,times;Trebuchet MS=trebuchet ms,geneva;Verdana=verdana,geneva",
+                height: 500,
+                statusbar: false,
+                toolbar: ["undo redo | cut copy paste | bold italic underline strikethrough | bullist numlist outdent indent removeformat  | styleselect formatselect fontselect fontsizeselect"],
+                menubar: false,
+            });
+        //bold italic underline strikethrough alignleft aligncenter alignright alignjustify styleselect formatselect fontselect fontsizeselect cut copy paste bullist numlist outdent indent blockquote undo redo removeformat subscript superscript
+    </script>
+</head>
+<body>
+    <textarea>Easy! You should check out MoxieManager!</textarea>
+</body>
+</html>
